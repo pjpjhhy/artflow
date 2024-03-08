@@ -208,7 +208,7 @@ header{
 }
 
 .two .pop-title div{
-    display: none;
+    width: 60.5%;
 }
 
 .two .pop-title p:nth-child(3){
@@ -229,7 +229,7 @@ header{
 }
 
 .three .pop-title div{
-    display: none;
+    width: 65%;
 }
 
 .three .pop-title p:nth-child(3){
