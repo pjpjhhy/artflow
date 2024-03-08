@@ -1,0 +1,417 @@
+/* 전체 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+body.menu-opened {
+    overflow: hidden;
+}
+
+/* header */
+header{
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.head .main-logo{
+    display: flex;
+    align-items: center;
+}
+
+.menu-container{
+    margin-left: 20px;
+    display: none;
+}
+
+.head ul{
+    display: flex;
+}
+
+.head .main-area{
+    display: flex;
+}
+
+.main-area div{
+    margin-right: 5px;
+}
+
+.main-area nav div:first-child, .main-area nav div:nth-child(3){
+    display: none;
+}
+
+/* 토글 */
+.toggle{
+    position: relative;
+}
+
+.tog-btn {
+    top: 0;
+    right: 0;
+}
+
+.tog-menu {
+    position: fixed;
+    top: 0;
+    right: -10px;
+    background-color: #fff; /* 흰색 배경 */
+    flex-direction: column;
+    width: 66vw; /* 가로 66% */
+    height: 100vh; /* 세로 66% */
+    display: none;
+}
+
+.tog-menu div{
+    display: flex;
+    flex-direction: column;
+}
+
+.tog-menu .id{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#closeButton {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.menus{
+    width: 100%;
+    padding-top: 30px;
+}
+
+.menus div ul{
+    margin-left: 73%;
+}
+
+.menus div:first-child{
+    border-bottom: 1px solid #ccc;
+}
+
+.menu li{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.tog-menu .menu{
+    display: flex;
+    flex-direction: column;
+}
+
+.as li{
+    font-size: 13px;
+    margin-bottom: 12px;
+    color:  #ccc;
+}
+
+.tog-menu .as{
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* section 1 */
+
+.popular{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+
+.pop-title{
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    align-items: center;
+}
+
+.pop-title div{
+    border-bottom: 2px solid #ccc;
+    display: flex;
+    width: 60%;
+    height: 20px;
+    margin-left: 12px;
+}
+
+.pop{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin: 10px;
+    gap: 20px;
+}
+
+.pop-show{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pop-show .show-img img{
+    width: 200px;
+}
+
+.pop-show .pop-description ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.pop-show .pop-description li{
+    margin-bottom: 2px;
+}
+
+.pop-description li:nth-child(2){
+    font-size: 12px;
+    color: #ccc;
+}
+
+.pop-description li:nth-child(3){
+    background-color: #ccc;
+    padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 13px;
+    border-radius: 30px;
+}
+
+/* seciton2 */
+.two .pop-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.two .pop-title div{
+    display: none;
+}
+
+.two .pop-title p:nth-child(3){
+    font-size: 12px;
+    color: #ccc;
+    text-decoration: underline;
+    margin-right: 5px;
+}
+
+/* section3 */
+.three{
+    padding-bottom: 50px;
+}
+
+.three .pop-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.three .pop-title div{
+    display: none;
+}
+
+.three .pop-title p:nth-child(3){
+    font-size: 12px;
+    color: #ccc;
+    text-decoration: underline;
+    margin-right: 5px;
+}
+
+/* footer */
+footer{
+    background-color: #ccc;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.foot{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.foot p{
+    margin-bottom: 4px;
+}
+
+/* tablet 768px */
+@media screen and (min-width:768px)  {
+ 
+/* section 1 */
+.pop-title div{
+    width: 74%;
+}
+
+
+/* section 2 */
+.two .pop-title div{
+    display: block;
+    width: 70%;
+} 
+
+.two .pop-title p:nth-child(3){
+    margin-right: 15px;
+}   
+
+
+/* section 3 */
+.three .pop-title div{
+    display: block;
+    width: 72%;
+}
+
+.three .pop-title p:nth-child(3){
+    margin-right: 15px;
+}   
+}
+
+/* pc 1024px */
+@media screen and (min-width:1024px) {
+    /* header */
+    .head{
+        width: 100%;
+    }
+
+    .menu-container{
+        display: block;
+    }
+
+    .main-area nav{
+        display: flex;
+        margin-right: 18px;
+    }
+
+    .main-area nav div:first-child, .main-area nav div:nth-child(3){
+        display: block;
+    }
+
+    .toggle{
+        display: none;
+    }
+
+    /* section1 */
+    .pop-title div{
+        width: 80%;
+        margin-left: 30px;
+    }
+
+    .pop-show .show-img img{
+        width: 100%;
+    }
+
+    /* section2 */
+    .two .pop-title div{
+        width: 82%;
+        margin-right: 10px;
+    }
+
+    .two .pop-title p:nth-child(3){
+        display: none;
+    }   
+
+    /* section3 */
+    .three .pop-title div{
+        width: 85%;
+        margin-right: 10px;
+    }
+
+    .three .pop-title p:nth-child(3){
+        display: none;
+    }   
+}
+
+/* pc 1440px */
+@media screen and (min-width:1440px) {
+    /* all seclect */
+    header{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .head{
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    section{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section .popular{
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    .menu-container{
+        display: block;
+    }
+
+    .main-area nav{
+        display: flex;
+        margin-right: 10 px;
+    }
+
+    .main-area nav div:first-child, .main-area nav div:nth-child(3){
+        display: block;
+    }
+    
+    .toggle{
+        display: none;
+    }
+
+    /* section1 */
+    .pop-title div{
+        width: 82.7%;
+        margin-left: 30px;
+    }
+
+    .pop-show .show-img img{
+        width: 100%;
+    }
+
+    /* seciton2 */
+    .two .pop-title div{
+        width: 85%;
+        margin-right: 10px;
+    }
+
+    .two .pop-title p:nth-child(3){
+        display: none;
+    }   
+
+    /* section3 */
+    .three .pop-title div{
+        width: 85%;
+        margin-right: 10px;
+    }
+
+    .three .pop-title p:nth-child(3){
+        display: none;
+    }   
+}
